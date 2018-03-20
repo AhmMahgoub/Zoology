@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Zoology</string>
+    <string name="Quiz_title">Animal Quiz</string>
+    <string name="Type_your_name_hint">Type Your name</string>
+    <string name="question_1_label">Question 1</string>
+    <string name="question_2_label">Question 2</string>
+    <string name="question_3_label">Question 3</string>
+    <string name="question_4_label">Question 4</string>
+    <string name="question_5_label">Question 5</string>
+    <string name="question_6_label">Question 6</string>
+    <string name="question_7_label">Question 7</string>
+    <string name="question_1_text">What existing bird has the largest wingspan?</string>
+    <string name="question_2_text">Which of the following animals sleep standing up?</string>
+    <string name="question_3_text">What color are zebras?</string>
+    <string name="question_4_text">True or false? Rabbits are born blind ?</string>
+    <string name="question_5_text">Which of the following choices are a mammal animals? \n (choose two answers) </string>
+    <string name="question_6_text">Which of the following animals live in nile river? \n (choose two answers)</string>
+    <string name="question_7_text">What Is the Fastest Animal in the World?</string>
+    <string name="q1_a1_text">Stork</string>
+    <string name="q1_a2_text">Swan</string>
+    <string name="q1_a3_text">Albatross</string>
+    <string name="q1_a4_text">Condor</string>
+    <string name="q2_a1_text">Gorillas</string>
+    <string name="q2_a2_text">Flamingos</string>
+    <string name="q2_a3_text">Camels</string>
+    <string name="q2_a4_text">Ravens</string>
+    <string name="q3_a1_text">White with black stripes</string>
+    <string name="q3_a2_text">Black with white stripes</string>
+    <string name="q3_a3_text">Both of the above</string>
+    <string name="q3_a4_text">None of the above</string>
+    <string name="q4_a1_text">true</string>
+    <string name="q4_a2_text">false</string>
+    <string name="q5_a1_text">Dolphin</string>
+    <string name="q5_a2_text">Sharks</string>
+    <string name="q5_a3_text">Rabbits</string>
+    <string name="q5_a4_text">ostrichp</string>
+    <string name="q6_a1_text">Hippopotamus</string>
+    <string name="q6_a2_text">Jaguar</string>
+    <string name="q6_a3_text">Banda</string>
+    <string name="q6_a4_text">Nile Crocodile</string>
+    <string name="q7_text_hint">Type your answer here </string>
+    <string name="submit_button_text">Submit</string>
+
+</resources>
