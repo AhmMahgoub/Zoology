@@ -4,12 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
-
-import java.security.PrivateKey;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,9 +42,9 @@ public class MainActivity extends AppCompatActivity {
         fifth_wrong_a2 = (CheckBox)findViewById(R.id.checkbox_q5_a4);
         Boolean fifth_wrong_a2_checked = fifth_wrong_a2.isChecked();
 
-        //get the values for checkbox correct choices and wrong choices
-        //for question number five
-
+        /*get the values for checkbox correct choices and wrong choices
+        *for question number five
+        */
         sixth_answer_a1 = (CheckBox)findViewById(R.id.checkbox_q6_a1);
         Boolean sixth_answer_a1_checked = sixth_answer_a1.isChecked();
 
@@ -60,49 +57,28 @@ public class MainActivity extends AppCompatActivity {
         sixth_wrong_a2 = (CheckBox)findViewById(R.id.checkbox_q6_a3);
         Boolean sixth_wrong_a2_checked = sixth_wrong_a2.isChecked();
 
-        //checkbox for  question number 5
-        //check if the user choose more than two choices will get zero points
-        // check if choose two choices correct will get 2 points
-        if( fifth_answer_a1_checked && fifth_answer_a2_checked)
+        /*checkbox for  question number 5
+        *check if the user choose more than two choices will get zero points
+        * check if choose two choices correct will get 2 points
+        */
+        if( fifth_answer_a1_checked && fifth_answer_a2_checked && !fifth_wrong_a1_checked && !fifth_wrong_a2_checked)
         {
-            if(fifth_wrong_a1_checked || fifth_wrong_a2_checked){
-                score_question_five = 0;
-            }
-            else{
-                score_question_five = 2 ;
-            }
+            score_question_five = 2;
         }
-        //check if the user choose one choice correct and the second choice wrong will get 1 point
-        // check if choose more than two will get zero point
-        else if(fifth_answer_a1_checked || fifth_answer_a2_checked){
-            if(fifth_wrong_a1_checked && fifth_wrong_a2_checked){
-                score_question_five = 0 ;
-            }
-            else if(fifth_wrong_a1_checked || fifth_wrong_a2_checked){
-                score_question_five = 1 ;
-            }
+        else{
+            score_question_five = 0 ;
         }
-        // checkbox for question number 6
-        //check if the user choose more than two choices will get zero points
-        // check if choose two choices correct will get 2 points
-        if( sixth_answer_a1_checked && sixth_answer_a2_checked)
+
+        /* checkbox for question number 6
+        *check if the user choose more than two choices will get zero points
+        * check if choose two choices correct will get 2 points
+        */
+        if( sixth_answer_a1_checked && sixth_answer_a2_checked  && !sixth_wrong_a1_checked && !sixth_wrong_a2_checked)
         {
-            if(sixth_wrong_a1_checked || sixth_wrong_a2_checked){
-                score_question_six = 0;
-            }
-            else{
-                score_question_six = 2 ;
-            }
+                score_question_six = 2;
         }
-        //check if the user choose one choice correct and the second choice wrong will get 1 point
-        // check if choose more than two will get zero point
-        else if(sixth_answer_a1_checked || sixth_answer_a2_checked){
-            if(sixth_wrong_a1_checked && sixth_wrong_a2_checked){
-                score_question_six = 0 ;
-            }
-            else if(sixth_wrong_a1_checked || sixth_wrong_a2_checked){
-                score_question_six = 1 ;
-            }
+        else{
+            score_question_six = 0 ;
         }
 
         checkbox_sum += score_question_five;
@@ -110,18 +86,14 @@ public class MainActivity extends AppCompatActivity {
         return checkbox_sum ;
     }
 
-
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
     }
+
       public void onClickSubmit(View view){
 
-
         // get the name of the participant
-
           EditText nameField = (EditText) findViewById(R.id.insert_name);
           String name = nameField.getText().toString();
 
@@ -131,14 +103,9 @@ public class MainActivity extends AppCompatActivity {
           third_answer = (RadioButton)findViewById(R.id.radio_q3_a2);
           fourth_answer = (RadioButton)findViewById(R.id.radio_q4_a1);
 
-
-
-
-
           //get the answer text from the user and store it in string
           EditText answer_Field = (EditText) findViewById(R.id.text_answer_q7);
           String text_answer = answer_Field.getText().toString();
-
 
          //compare the right answer
           if(text_answer.equals(right_text_answer))
@@ -159,19 +126,13 @@ public class MainActivity extends AppCompatActivity {
               correct_answer++;
           }
 
-
-
           int final_result = calculate_checkbox_score();
           correct_answer += final_result ;
-          //show the result
 
+          //show the result
           Toast.makeText(this, name + " , You have " + correct_answer + " of 10 points " , Toast.LENGTH_LONG).show();
 
           finish();
           startActivity(getIntent());
-
       }
-
-
-
 }
